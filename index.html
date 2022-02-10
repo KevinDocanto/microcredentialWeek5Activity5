@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin do Canto - Activity 7</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <h1 class="title">Modal window</h1>
+    <form action="checkout.html" method="post ">
+    <a class="link" href="#openModal">Click here</a>
+    <div class="modalWindow" id="openModal">
+      <section class="content">
+        <a class="close" href="#">&#10005;</a>
+        <section class="info">
+          <img src="lotion.jfif" alt="PINK WATERMELON LOTION" />
+          <div class="p">
+            <h1 class="product-name">PINK WATERMELON</h1>
+            <br />
+            <i>Super Smooth Body Lotion</i>
+            <hr />
+            A sweet summer blend of juicy watermelon, pink petals and dewy aloe
+            in our nutrient rich, non greasy lotion.
+            <hr />
+            <span>$13.50</span><b>Now $3.25</b>
+            <a onclick="addItem();" class="add" href="checkout.html"
+              >ADD TO BAG</a
+            >
+          </div>
+        </section>
+      </section>
+    </form>
+
+      <script text="javascript/text">
+        function addItem() {
+          let productName = document.querySelector(
+            `${'.product-name'}`
+          ).innerHTML;
+          let price = 3.25;
+
+          localStorage.setItem('product', `${productName}`);
+          localStorage.setItem('product-price', `${price}`);
+          return false;
+        }
+      </script>
+    </div>
+  </body>
+</html>
