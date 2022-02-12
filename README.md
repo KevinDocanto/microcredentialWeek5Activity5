@@ -1,3 +1,3 @@
-# Final Project Micro Credential
+# Micro Credential Final Project
 
 E-commerce website
